@@ -12,12 +12,12 @@
 
         <!-- # planner global -->
         <rosparam file="$(find ros_my_move_base)/config/planner/GlobalPlanner.yaml" command="load" />
-        <!-- <rosparam file="$(find ros_my_move_base)/config/move_base/planner/NavfnROS.yaml" command="load" /> -->
+        <!-- <rosparam file="$(find ros_my_move_base)/config/planner/NavfnROS.yaml" command="load" /> -->
 
         <!-- # planner local -->
-        <!-- <rosparam file="$(find ros_my_move_base)/config/move_base/planner/TrajectoryPlannerROS.yaml" command="load" /> -->
+        <!-- <rosparam file="$(find ros_my_move_base)/config/planner/TrajectoryPlannerROS.yaml" command="load" /> -->
         <rosparam file="$(find ros_my_move_base)/config/planner/DWAPlannerROS.yaml" command="load" />
-        <!-- <rosparam file="$(find ros_my_move_base)/config/move_base/planner/TebLocalPlannerROS.yaml" command="load" /> -->
+        <!-- <rosparam file="$(find ros_my_move_base)/config/planner/TebLocalPlannerROS.yaml" command="load" /> -->
 
         <!-- # costmap common -->
         <rosparam file="$(find ros_my_move_base)/config/costmap/common.yaml" command="load" ns="global_costmap" />
