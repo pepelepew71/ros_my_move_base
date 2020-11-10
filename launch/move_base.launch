@@ -4,6 +4,7 @@
 
     <!-- # args -->
     <arg name="use_map" default="true" />
+    <arg name="cmd_vel" default="cmd_vel" />
 
     <!-- # move_base -->
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
@@ -30,8 +31,8 @@
         <!-- # costmap local -->
         <rosparam file="$(find ros_my_move_base)/config/costmap/local.yaml" command="load" ns="local_costmap" />
 
-        <!-- # for twist_mux multi-input -->
-        <!-- <remap from="cmd_vel" to="nav_vel" /> -->
+        <!-- # remap cmd_vel -->
+        <remap from="cmd_vel" to="$(arg cmd_vel)" />
 
     </node>
 
